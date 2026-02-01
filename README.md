@@ -5,7 +5,9 @@
 ---
 
 ### About Me
-I am an engineering student passionate about Embedded Systems, Analog Circuit Design, and Semiconductor Physics. My goal is to bridge the gap between theoretical models and practical hardware implementation in the R&D sector.
+I am an Electrical-Electronics Engineering student at Abdullah Gül University (AGU) with a specialized interest in Analog Circuit Design, Discrete Electronics, and Signal Integrity. My engineering philosophy is built on the principle of bridging the gap between complex mathematical models and robust, industrial-grade hardware.
+
+Rather than relying solely on high-level integrated solutions, I am passionate about exploring the "physics of the circuit"—designing from the ground up using discrete components. My work involves extensive transistor-level modeling in LTSpice, where I analyze parasitic behaviors, timing constraints, and frequency responses. From designing high-precision Sallen-Key active filters to optimizing Wien Bridge oscillators, I focus on developing electronic systems that are not only functional but also optimized for reliability and cost-effectiveness in R&D environments.
 
 ---
 
