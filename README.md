@@ -41,4 +41,4 @@ Rather than relying solely on high-level integrated solutions, I am passionate a
 
 ---
 Feel free to explore the reports linked above.  
-**Contact:** [yusuf.yildiz@bakcay.com](mailto:yusuf.yildiz@bakcay.com) | [Connect on LinkedIn](https://www.linkedin.com/in/yusuf-y%C3%B1ld%C3%BDz-176b66299/)
+**Contact:** [yusuf.yildiz@agu.edu.tr](mailto:yusuf.yildiz@agu.edu.tr) |
