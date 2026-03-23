@@ -41,4 +41,4 @@ Rather than relying solely on high-level integrated solutions, I am passionate a
 
 ---
 Feel free to explore the reports linked above.  
-**Contact:** [yusuf.yildiz@agu.edu.tr](mailto:yusuf.yildiz@agu.edu.tr) |
+**Contact:** [yusufyldz.eee@gmail.com](mailto:yusufyldz.eee@gmail.com) |
