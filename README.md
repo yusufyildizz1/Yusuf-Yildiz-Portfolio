@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=210&section=header&text=Yusuf%20Y%C4%B1ld%C4%B1z&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Engineering%20Portfolio%20%E2%80%94%20Electrical%20%26%20Electronics%20Engineering%20%40%20AGU&descSize=16&descAlignY=52" alt="Yusuf Yıldız — Engineering Portfolio" width="100%"/>
+
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=19&duration=2800&pause=900&color=2C5364&center=true&vCenter=true&width=650&lines=Analog+Circuit+Design;Discrete+Electronics+%26+Signal+Integrity;Transistor-Level+Modeling+in+LTSpice;From+Mathematical+Models+to+Industrial-Grade+Hardware" alt="Analog Circuit Design · Discrete Electronics · Signal Integrity"/>
 
