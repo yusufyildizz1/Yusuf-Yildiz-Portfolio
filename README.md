@@ -3,7 +3,7 @@
 ```text
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   YUSUF YILDIZ                                              Rev. 2.1     ║
+║   YUSUF YILDIZ                                              Rev. 2.2     ║
 ║   Electrical & Electronics Engineering — Senior Student                  ║
 ║                                                                          ║
 ║   FOCUS    Analog Circuit Design · Discrete Electronics ·                ║
@@ -48,6 +48,7 @@ My work involves extensive **transistor-level modeling in LTSpice**, where I ana
 - **Wien Bridge oscillator** design and optimization
 - Bridging **complex mathematical models** with **robust, industrial-grade hardware**
 - Systems optimized for **reliability and cost-effectiveness** in R&D environments
+- **End-to-end communication link design** — source coding, digital modulation, and real RF transmission over SDR
 
 ## 3. APPLICATIONS
 
@@ -55,6 +56,7 @@ My work involves extensive **transistor-level modeling in LTSpice**, where I ana
 - Microcontroller-free capacitive sensing interfaces
 - Semiconductor lithography process simulation (EUV / ArF)
 - CMOS digital building blocks — oscillators, counters, multiplexers
+- Low-bit-rate parametric speech coding over software-defined radio links
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:F5D33C,33:29C5F6,66:E040FB,100:66BB6A&height=4" width="100%" alt=""/>
 
@@ -79,7 +81,7 @@ Every design starts from first principles: hand analysis, then transistor-level 
 ## 5. PROJECT PORTFOLIO
 
 *Projects are color-coded like oscilloscope channels —*
-<img src="https://img.shields.io/badge/CH1-F5D33C?style=flat-square" alt="CH1"/> <img src="https://img.shields.io/badge/CH2-29C5F6?style=flat-square" alt="CH2"/> <img src="https://img.shields.io/badge/CH3-E040FB?style=flat-square" alt="CH3"/> <img src="https://img.shields.io/badge/CH4-66BB6A?style=flat-square" alt="CH4"/>
+<img src="https://img.shields.io/badge/CH1-F5D33C?style=flat-square" alt="CH1"/> <img src="https://img.shields.io/badge/CH2-29C5F6?style=flat-square" alt="CH2"/> <img src="https://img.shields.io/badge/CH3-E040FB?style=flat-square" alt="CH3"/> <img src="https://img.shields.io/badge/CH4-66BB6A?style=flat-square" alt="CH4"/> <img src="https://img.shields.io/badge/CH5-FF8A65?style=flat-square" alt="CH5"/>
 
 ### 5.1 — SAPA · Electronic Stethoscope
 
@@ -129,14 +131,27 @@ CMOS schematic (ring osc. · counters) ─▶ [ SPICE simulation ] ─▶ [ timi
 
 **Documentation** — [![View Full Report](https://img.shields.io/badge/%F0%9F%93%84_View_Full_Report-PDF-8B0000?style=flat-square)](./Digital_System_Design_Final_Report.pdf)
 
+### 5.5 — CAPSUL · LPC Vocoder over Software-Defined Radio
+
+<img src="https://img.shields.io/badge/CH5-FF8A65?style=flat-square" alt="CH5"/> <img src="https://img.shields.io/badge/DSP-LPC%2FLSF_Vocoder-blue?style=flat-square" alt="LPC/LSF Vocoder"/> <img src="https://img.shields.io/badge/Modulation-BPSK_%2B_RRC-orange?style=flat-square" alt="BPSK + RRC"/> <img src="https://img.shields.io/badge/SDR-USRP--2900_%C2%B7_915_MHz-purple?style=flat-square" alt="USRP-2900 SDR, 915 MHz"/>
+
+Built an **end-to-end digital voice link** in MATLAB: corrupted 48 kHz speech is filtered and decimated to 8 kHz, compressed with a **14th-order LPC/LSF parametric vocoder** (128 bits/frame · **10.4 : 1 compression** vs 16-bit PCM), and transmitted as **RRC-shaped BPSK** over a real **USRP-2900 SDR** loopback in the **915 MHz ISM band**. The receiver chain — matched filtering, correlation-based frame synchronization (31.5 dB), phase correction and **1/A(z) LPC synthesis** — recovered intelligible speech with a measured **BER of 1.5 × 10⁻⁴** (51/52 error-free frames).
+
+```text
+speech 48 kHz ─▶ [ FIR LPF · ÷6 decimation ] ─▶ [ LPC-14 → LSF · 128 bits/frame ] ─▶ [ BPSK · RRC 0.35 ]
+    ─▶ [ USRP-2900 TX/RX · 915 MHz ISM ] ─▶ [ matched filter · corr. sync ] ─▶ [ 1/A(z) synthesis ] ─▶ speech 8 kHz
+```
+
+**Documentation** — [![View Full Report](https://img.shields.io/badge/%F0%9F%93%84_View_Full_Report-PDF-8B0000?style=flat-square)](./EE3001_Final_Report.pdf)
+
 <!-- ═════════════════════ YENİ PROJELER BURAYA ═════════════════════
-Yeni 2 projeyi 5.5 ve 5.6 olarak bu yorumun ÜSTÜNE ekleyin.
-Şablon (kopyala, doldur — kanal rengi olarak CH5/CH6 için yeni bir
-hex seçebilir ya da paleti tekrarlayabilirsiniz):
+Kalan projeyi 5.6 olarak bu yorumun ÜSTÜNE ekleyin.
+Şablon (kopyala, doldur — kanal rengi olarak CH6 için yeni bir
+hex seçebilirsiniz):
 
-### 5.5 — Proje Adı
+### 5.6 — Proje Adı
 
-<img src="https://img.shields.io/badge/CH5-FF8A65?style=flat-square" alt="CH5"/> <img src="https://img.shields.io/badge/Etiket-Deger-blue?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/CH6-E53935?style=flat-square" alt="CH6"/> <img src="https://img.shields.io/badge/Etiket-Deger-blue?style=flat-square" alt=""/>
 
 Kısa proje açıklaması (1–2 cümle, İngilizce).
 
@@ -165,6 +180,7 @@ Detailed breakdowns of specific digital design tasks:
 |:---|:---|
 | **Hardware Design** | <img src="https://img.shields.io/badge/PCB_Design-2E7D32?style=flat-square" alt="PCB Design"/> <img src="https://img.shields.io/badge/Analog_Filters_(Active%2FPassive)-F57C00?style=flat-square" alt="Analog Filters"/> <img src="https://img.shields.io/badge/Oscillators-8E24AA?style=flat-square" alt="Oscillators"/> <img src="https://img.shields.io/badge/Discrete_Electronics_(BJT%2FMOSFET)-546E7A?style=flat-square" alt="Discrete Electronics"/> |
 | **Embedded Systems** | <img src="https://img.shields.io/badge/Arduino_(AVR)-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino"/> <img src="https://img.shields.io/badge/STM32-Basics-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white" alt="STM32"/> <img src="https://img.shields.io/badge/Sensor_Integration_(ADC%2FDAC%2FI2C)-00695C?style=flat-square" alt="Sensor Integration"/> |
+| **Telecom & DSP** | <img src="https://img.shields.io/badge/Analog_Modulation_(AM%2FFM%2FPM)-5D4037?style=flat-square" alt="Analog Modulation"/> <img src="https://img.shields.io/badge/Digital_Modulation_(ASK%2FFSK%2FPSK)-283593?style=flat-square" alt="Digital Modulation"/> <img src="https://img.shields.io/badge/Speech_Coding_(LPC%2FLSF)-AD1457?style=flat-square" alt="Speech Coding"/> <img src="https://img.shields.io/badge/SDR_(USRP--2900)-4527A0?style=flat-square" alt="SDR"/> <img src="https://img.shields.io/badge/Information_Theory_%26_Source_Coding-00838F?style=flat-square" alt="Information Theory"/> |
 | **Simulation & Tools** | <img src="https://img.shields.io/badge/MATLAB-Advanced-E86E05?style=flat-square" alt="MATLAB Advanced"/> <img src="https://img.shields.io/badge/LTSpice-900000?style=flat-square" alt="LTSpice"/> <img src="https://img.shields.io/badge/Altium_Designer-Learning-A5915F?style=flat-square" alt="Altium Designer"/> <img src="https://img.shields.io/badge/Proteus-1565C0?style=flat-square" alt="Proteus"/> |
 | **Programming** | <img src="https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C/C++"/> <img src="https://img.shields.io/badge/MATLAB-Scripting-E86E05?style=flat-square" alt="MATLAB Scripting"/> <img src="https://img.shields.io/badge/Python-Basic-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/> |
 
@@ -197,6 +213,7 @@ Feel free to explore the reports linked above.
 | 1.0 | — | Initial release — first four project reports published |
 | 2.0 | 2026-07 | Portfolio restructured in datasheet format |
 | 2.1 | 2026-07 | Color revision — oscilloscope channel palette, Mermaid methodology diagram |
+| 2.2 | 2026-07 | Added CH5 — CAPSUL: LPC/LSF vocoder over USRP-2900 SDR · Telecom & DSP capabilities |
 
 <sub>Designed at the transistor level · documented like a datasheet · color-coded like a scope.</sub>
 
