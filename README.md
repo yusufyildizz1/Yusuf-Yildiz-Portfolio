@@ -24,7 +24,18 @@ End-to-end digital voice link built in MATLAB and tested over a real RF loopback
 
 `MATLAB` `Communications Toolbox` `USRP` `DSP` · [Report (PDF)](./EE3001_Final_Report.pdf)
 
-### 2. SAPA — Electronic Stethoscope
+### 2. Capacitive Touch Lock — Microcontroller-Free Analog Interface
+*Analogue Electronics project · Team of 2 (with Yusuf Taha Gümüş)*
+
+Two-key touch lock that converts a homemade capacitive sensor's picofarad-level change into a logic signal using only analog stages — no microcontroller.
+
+- **Signal chain:** TL082 Wien-bridge oscillator (50 kHz carrier) → capacitive sensor → two-stage 2N2222 BJT amplifier with emitter degeneration → 1N5819 Schottky voltage doubler → 74HC74 D flip-flop state hold
+- **Simulation:** LTspice parametric sweep of sensor capacitance (10–90 pF); 6–8 ms output settling that acts as a built-in debounce
+- **Bench results (breadboard, 5 V supply):** 50.0 kHz carrier measured on the oscilloscope; key output rises to 4.8 V on touch
+
+`LTspice` `Discrete BJT Design` `Oscillators` `Breadboard Prototyping` · [Report (PDF)](./Analog_Capacitive_Touch_Sensor_Report.pdf)
+
+### 3. SAPA — Electronic Stethoscope
 *Capsule project · Team of 3 (with Sude Nur Görez, Yusuf Taha Gümüş)*
 
 Analog front-end and MATLAB application for recording and analysing heart sounds.
@@ -35,17 +46,6 @@ Analog front-end and MATLAB application for recording and analysing heart sounds
 - Filter responses verified in LTspice (Bode plots) before the hardware build
 
 `LTspice` `Analog Filters` `Arduino` `MATLAB App Designer` · [Report (PDF)](./SAPA_Electronic_Stethoscope_Report.pdf)
-
-### 3. Capacitive Touch Lock — Microcontroller-Free Analog Interface
-*Analogue Electronics project · Team of 2 (with Yusuf Taha Gümüş)*
-
-Two-key touch lock that converts a homemade capacitive sensor's picofarad-level change into a logic signal using only analog stages — no microcontroller.
-
-- **Signal chain:** TL082 Wien-bridge oscillator (50 kHz carrier) → capacitive sensor → two-stage 2N2222 BJT amplifier with emitter degeneration → 1N5819 Schottky voltage doubler → 74HC74 D flip-flop state hold
-- **Simulation:** LTspice parametric sweep of sensor capacitance (10–90 pF); 6–8 ms output settling that acts as a built-in debounce
-- **Bench results (breadboard, 5 V supply):** 50.0 kHz carrier measured on the oscilloscope; key output rises to 4.8 V on touch
-
-`LTspice` `Discrete BJT Design` `Oscillators` `Breadboard Prototyping` · [Report (PDF)](./Analog_Capacitive_Touch_Sensor_Report.pdf)
 
 ### 4. Two-Axis Laser Scanner — Optical Design and Servo Control
 *EE421 Geometrical Optics · Team of 3 (with Sude Nur Görez, Yusuf Taha Gümüş) · 2026 · electronics and control design phase*
