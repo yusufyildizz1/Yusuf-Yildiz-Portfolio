@@ -1,6 +1,7 @@
 # Yusuf Yıldız — Engineering Portfolio
 
 **Senior Electrical & Electronics Engineering student, Abdullah Gül University (AGU)** · Kayseri, Türkiye · English-medium program
+
 Contact: [yusufyldz.eee@gmail.com](mailto:yusufyldz.eee@gmail.com)
 
 ---
@@ -86,6 +87,7 @@ Three-stage design built from discrete transistors and logic, simulated end to e
 ## Experience
 
 **Engineering Intern — GİS Elektrik** · Jul–Aug 2026
+
 Electrical panel production and drawing; worked both on the assembly floor and in the design office (AutoCAD, EPLAN Electric P8).
 
 ---
