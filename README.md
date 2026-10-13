@@ -25,6 +25,8 @@ End-to-end digital voice link built in MATLAB and tested over a real RF loopback
 
 `MATLAB` `Communications Toolbox` `USRP` `DSP` · [Report (PDF)](./EE3001_Final_Report.pdf)
 
+<table><tr><td width="50%"><img src="media/capsul_rf_loopback_speech.jpg" alt="RF loopback: transmitted vs received baseband, speech comparison and spectrogram"><br><sub>RF loopback: transmitted vs received baseband, speech comparison and spectrogram</sub></td><td width="50%"><img src="media/capsul_bpsk_performance.jpg" alt="BPSK over USRP: constellation, BER vs Eb/N0, spectrum"><br><sub>BPSK over USRP: constellation, BER vs Eb/N0, spectrum</sub></td></tr></table>
+
 ### 2. Capacitive Touch Lock — Microcontroller-Free Analog Interface
 *Analogue Electronics project · Team of 2 (with Yusuf Taha Gümüş)*
 
@@ -35,6 +37,8 @@ Two-key touch lock that converts a homemade capacitive sensor's picofarad-level 
 - **Bench results (breadboard, 5 V supply):** 50.0 kHz carrier measured on the oscilloscope; key output rises to 4.8 V on touch
 
 `LTspice` `Discrete BJT Design` `Oscillators` `Breadboard Prototyping` · [Report (PDF)](./Analog_Capacitive_Touch_Sensor_Report.pdf)
+
+<table><tr><td width="50%"><img src="media/touchlock_breadboard.jpg" alt="Two-key breadboard prototype"><br><sub>Two-key breadboard prototype</sub></td><td width="50%"><img src="media/touchlock_oscilloscope_50khz.jpg" alt="Wien-bridge carrier measured at 50.0 kHz"><br><sub>Wien-bridge carrier measured at 50.0 kHz</sub></td></tr></table>
 
 ### 3. SAPA — Electronic Stethoscope
 *Capsule project · Team of 3 (with Sude Nur Görez, Yusuf Taha Gümüş)*
@@ -48,6 +52,8 @@ Analog front-end and MATLAB application for recording and analysing heart sounds
 
 `LTspice` `Analog Filters` `Arduino` `MATLAB App Designer` · [Report (PDF)](./SAPA_Electronic_Stethoscope_Report.pdf)
 
+<table><tr><td width="50%"><img src="media/sapa_matlab_gui.jpg" alt="MATLAB App Designer GUI: raw/filtered signal, FFT and BPM"><br><sub>MATLAB App Designer GUI: raw/filtered signal, FFT and BPM</sub></td><td width="50%"><img src="media/sapa_oscilloscope_heartbeat.jpg" alt="Heartbeat waveform on the oscilloscope"><br><sub>Heartbeat waveform on the oscilloscope</sub></td></tr></table>
+
 ### 4. Two-Axis Laser Scanner — Optical Design and Servo Control
 *EE421 Geometrical Optics · Team of 3 (with Sude Nur Görez, Yusuf Taha Gümüş) · 2026 · electronics and control design phase*
 
@@ -60,6 +66,8 @@ Laser projector that writes letters on a screen by steering a beam with two serv
 
 `Zemax` `Arduino` `Servo Control` `Optics` · [Phase II report (PDF)](./Laser_Scanner_EE421_Phase2_Report.pdf)
 
+<table><tr><td width="50%"><img src="media/laser_block_diagram.jpg" alt="System block diagram"><br><sub>System block diagram</sub></td><td width="50%"><img src="media/laser_circuit.jpg" alt="Wiring: Arduino, two MG90S servos, 2N2222 laser switch"><br><sub>Wiring: Arduino, two MG90S servos, 2N2222 laser switch</sub></td></tr></table>
+
 ### 5. LithoSuite — Optical Lithography Process Simulator
 *Team of 3 (with Sude Nur Görez, Yusuf Taha Gümüş) · intermediate report*
 
@@ -70,6 +78,8 @@ Educational MATLAB tool that models pattern transfer in optical lithography and 
 - **Outputs:** aerial image, resist profile, intensity map and printed-wafer view, with automatic pass/fail diagnostics based on MTF
 
 `MATLAB` `Semiconductor Processing` `Physical Modeling` · [Report (PDF)](./LithoSuite_Lithography_Simulation_Report.pdf)
+
+<table><tr><td width="50%"><img src="media/lithosuite_pass_case.jpg" alt="ArF scenario: aerial image, resist profile, printed wafer"><br><sub>ArF scenario: aerial image, resist profile, printed wafer</sub></td><td width="50%"><img src="media/lithosuite_defocus_failure.jpg" alt="Defocus failure case flagged by the diagnostics"><br><sub>Defocus failure case flagged by the diagnostics</sub></td></tr></table>
 
 ### 6. Gate-Level Digital System — Ring Oscillator, CMOS MUX and Switchable Counter
 *Digital System Design capsule project · Team of 2 (with Yusuf Taha Gümüş)*
@@ -82,13 +92,20 @@ Three-stage design built from discrete transistors and logic, simulated end to e
 
 `LTspice` `Discrete CMOS` `Sequential Logic` · [Final report (PDF)](./Digital_System_Design_Final_Report.pdf) · [Task 1: Ring oscillator](./CMOS_Ring_Oscillator_Design_Report.pdf) · [Task 2: Multiplexer](./CMOS_Multiplexer_Design_Report.pdf) · [Simulation video](https://youtu.be/IeM8DrGkxiU)
 
+<table><tr><td width="50%"><img src="media/digital_counter_simulation.jpg" alt="Full system simulation driving 7-segment displays"><br><sub>Full system simulation driving 7-segment displays</sub></td><td width="50%"><img src="media/digital_timing_diagram.jpg" alt="Timing diagram of oscillator, MUX and counter outputs"><br><sub>Timing diagram of oscillator, MUX and counter outputs</sub></td></tr></table>
+
 ---
 
 ## Experience
 
-**Engineering Intern — GİS Elektrik** · Jul–Aug 2026
+**Engineering Intern — GİS Elektrik** · İstanbul · Jul–Aug 2026
 
-Electrical panel production and drawing; worked both on the assembly floor and in the design office (AutoCAD, EPLAN Electric P8).
+Electrical distribution panel design and production (main distribution, power factor correction and metering panels).
+
+- **Quotation automation (Python):** built an internal tool that reads the AutoCAD DXF export of a three-line schematic (`ezdxf`), maps each device tag to a catalogue entry in SQLite, expands it through module-level consumable recipes (cable, ferrules, terminals, busbar, labelling) measured on real panels, and produces the quotation in the company's standard format together with a step-by-step trace from schematic to consumables; validated against a manually prepared quotation on a live project
+- **Design:** read single-line and three-line diagrams in AutoCAD; drew object-oriented schematics in EPLAN Electric P8 (device tagging, macros, automatic terminal numbering)
+- **Assembly:** wired a multi-stage PFC panel with current-based cable sizing (2.5 / 4 / 6 mm² for 16–40 A branches); studied ATS control logic (phase monitoring relay, time-delay return, priority-relay interlocking)
+- **Troubleshooting:** traced a UPS bypass failure to a mis-terminated cam switch; diagnosed nuisance tripping of an MCCB with toroidal residual-current protection; isolated a metering-panel neutral fault to the meter itself
 
 ---
 
@@ -100,5 +117,5 @@ Electrical panel production and drawing; worked both on the assembly floor and i
 | **DSP & communications** | Speech coding (LPC/LSF), digital modulation (BPSK, ASK/FSK/PSK), pulse shaping, SDR (USRP-2900), analog modulation (AM/FM/PM) |
 | **Embedded** | Arduino (ADC sampling, serial data streaming, servo PWM control) |
 | **Software & tools** | MATLAB (App Designer, Communications Toolbox), LTspice, Proteus, AutoCAD, EPLAN Electric P8 |
-| **Programming** | MATLAB, C/C++ (Arduino), Python (basic) |
+| **Programming** | MATLAB, Python (ezdxf, SQLite), C/C++ (Arduino) |
 | **Currently learning** | Altium Designer (PCB design), STM32 |
